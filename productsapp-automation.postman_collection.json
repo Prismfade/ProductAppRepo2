@@ -63,9 +63,48 @@
     },
     {
       "name": "Second Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();\r",
+              "//wrote for ID 1\r",
+              "pm.test(\"value of Id to be 1\", () => {pm.expect(jsonData.Id).to.equal(1)});\r",
+              "pm.test(\"value of Name to be 'Tomato Soup'\", () => {pm.expect(jsonData.Name).to.equal('Tomato Soup')});\r",
+              "pm.test(\"value of Category to be 'Groceries'\", () => {pm.expect(jsonData.Category).to.equal('Groceries')});\r",
+              "pm.test(\"value of Price to be 1\", () => {pm.expect(jsonData.Price).to.equal(1)});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "packages": {},
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44387/api/products/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44387",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
       },
       "response": []
     }
