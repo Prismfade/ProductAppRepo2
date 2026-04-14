@@ -32,7 +32,7 @@
               "pm.test(\"value of [2].Id to be 3\", () => {pm.expect(jsonData[2].Id).to.equal(3)});\r",
               "pm.test(\"value of [2].Name to be Hammer\", () => {pm.expect(jsonData[2].Name).to.equal(\"Hammer\")});\r",
               "pm.test(\"value of [2].Category to be Hardware\", () => {pm.expect(jsonData[2].Category).to.equal(\"Hardware\")});\r",
-              "pm.test(\"value of [2].Price to be 3.75\", () => {pm.expect(jsonData[2].Price).to.equal(16.99)});\r",
+              "pm.test(\"value of [2].Price to be 16.99\", () => {pm.expect(jsonData[2].Price).to.equal(16.99)});\r",
               "\r",
               "//200 ok\r",
               "pm.test(\"response to be 200 OK\", () => {pm.response.to.have.status(200)});"
